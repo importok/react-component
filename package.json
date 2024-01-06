@@ -1,11 +1,11 @@
 {
   "name": "@importok/react",
   "description": "React component for importOK",
-  "version": "0.8.4",
+  "version": "0.8.6",
   "main": "index.js",
   "homepage": "https://importok.io/",
   "dependencies": {
-    "@importok/javascript": "^0.8.4"
+    "@importok/javascript": "^0.8.5"
   },
   "peerDependencies": {
     "react": "^18.2.0"
