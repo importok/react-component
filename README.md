@@ -31,6 +31,7 @@ function App() {
       <ImportokWizard
         title="ImportOK Example for React"
         fields={fields}
+        sampleFile="/sample.csv"
         onRecordReady={saveRecord}
       />
     </div>
