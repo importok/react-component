@@ -11,7 +11,7 @@ npm install --save @importok/react
 ## Usage
 
 ```react
-import import ImportokWizard from '@importok/react';
+import ImportokWizard from '@importok/react';
 
 function App() {
   /**
@@ -26,16 +26,30 @@ function App() {
    */
   const saveRecord = async function (record, meta) {};
 
+  /**
+   * Custom transformers
+   * Check https://importok.io/docs/custom-transformers.html for more details
+   */
+  const transformers = {};
+ 
+  /**
+   * Custom validators
+   * Check https://importok.io/docs/custom-validators.html for more details
+   */
+  const validators = {};
+
   return (
     <div className="App">
       <ImportokWizard
         title="ImportOK Example for React"
         fields={fields}
-        sampleFile="/sample.csv"
+        transformers={transformers}
+        validators={validators} 
         onRecordReady={saveRecord}
       />
     </div>
   );
 }
-
 ```
+
+[Learn more →](https://importok.io/docs/react.html)
