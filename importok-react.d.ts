@@ -18,6 +18,12 @@ export interface ImportokWizardProps {
   providers?: {
     [key: string]: ProviderCallback;
   };
+  locale?: string;
+  translations?: {
+      [key: string]: {
+          [key: string]: string;
+      };
+  };
   mapper?: MapperStrategy;
   sampleFile?: string;
   uploadedFile?: File;
