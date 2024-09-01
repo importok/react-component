@@ -6,7 +6,7 @@
   "homepage": "https://importok.io/",
   "types": "importok-react.d.ts",
   "peerDependencies": {
-    "@importok/javascript": "^0.14"
+    "@importok/javascript": "^0.15"
   },
   "devDependencies": {
     "@types/react": "^18.3.3"
