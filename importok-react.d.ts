@@ -31,6 +31,11 @@ export interface ImportokWizardProps {
   meta?: any;
   onRecordReady?: (record: ImportRecord, meta: any) => any;
   onImportReady?: (records: ImportRecord[], meta: any) => any;
+  onImportProgress?: (processed: number, failed: number, total: number) => void;
+  onStepEnter?: (step: StepEnterEvent | number, previousStep: null | number) => any;
+  onStepExit?: (step: StepExitEvent | number, nextStep: null | number) => any;
+  warnOnPageUnload?: boolean;
+  style?: string;
 }
 
 export interface ImportokWizardState {}
