@@ -1,7 +1,7 @@
 {
   "name": "@importok/react",
   "description": "React component for importOK",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "main": "index.js",
   "homepage": "https://importok.io/",
   "types": "importok-react.d.ts",
