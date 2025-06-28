@@ -29,6 +29,7 @@ export interface ImportokWizardProps {
   uploadedFile?: File;
   throttle?: false | number;
   meta?: any;
+  editorMode?: 'advanced' | 'basic';
   onRecordReady?: (record: ImportRecord, meta: any) => any;
   onImportReady?: (records: ImportRecord[], meta: any) => any;
   onImportProgress?: (processed: number, failed: number, total: number) => void;
