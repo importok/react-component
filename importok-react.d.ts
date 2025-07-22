@@ -1,40 +1,27 @@
+import { ImportConfigDataProviders, ImportConfigEditorMode, ImportConfigFields, ImportConfigTransformers, ImportConfigTranslations, ImportConfigValidators, ImportRecord, MapperStrategy } from '@importok/javascript';
 import MainElement from '@importok/javascript/MainElement';
 import * as React from 'react';
 
 export interface ImportokWizardProps {
   title?: string;
   subtitles?: string[];
-  fields: {
-    [key: string]: Omit<ImportField, 'description'> & {
-      description?: string;
-    };
-  };
-  transformers?: {
-    [key: string]: (record: ImportRecord, key: string, ...args: string[]) => boolean | string;
-  };
-  validators?: {
-    [key: string]: (record: ImportRecord, key: string, ...args: string[]) => boolean | string;
-  };
-  providers?: {
-    [key: string]: ProviderCallback;
-  };
+  fields: ImportConfigFields;
+  transformers?: ImportConfigTransformers;
+  validators?: ImportConfigValidators;
+  providers?: ImportConfigDataProviders;
   locale?: string;
-  translations?: {
-      [key: string]: {
-          [key: string]: string;
-      };
-  };
+  translations?: ImportConfigTranslations;
   mapper?: MapperStrategy;
   sampleFile?: string;
   uploadedFile?: File;
   throttle?: false | number;
   meta?: any;
-  editorMode?: 'advanced' | 'basic';
+  editorMode?: ImportConfigEditorMode;
   onRecordReady?: (record: ImportRecord, meta: any) => any;
   onImportReady?: (records: ImportRecord[], meta: any) => any;
   onImportProgress?: (processed: number, failed: number, total: number) => void;
-  onStepEnter?: (step: StepEnterEvent | number, previousStep: null | number) => any;
-  onStepExit?: (step: StepExitEvent | number, nextStep: null | number) => any;
+  onStepEnter?: (step: number, previousStep: null | number) => any;
+  onStepExit?: (step: number, nextStep: null | number) => any;
   warnOnPageUnload?: boolean;
   style?: string;
 }
