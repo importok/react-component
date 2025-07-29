@@ -12,7 +12,7 @@ export interface ImportokWizardProps {
   locale?: string;
   translations?: ImportConfigTranslations;
   mapper?: MapperStrategy;
-  sampleFile?: string;
+  sampleFile?: string | File;
   uploadedFile?: File;
   throttle?: false | number;
   meta?: any;
@@ -23,6 +23,7 @@ export interface ImportokWizardProps {
   onStepEnter?: (step: number, previousStep: null | number) => any;
   onStepExit?: (step: number, nextStep: null | number) => any;
   warnOnPageUnload?: boolean;
+  allowManualRecords?: boolean;
   style?: string;
 }
 
