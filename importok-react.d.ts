@@ -25,6 +25,7 @@ export interface ImportokWizardProps {
   warnOnPageUnload?: boolean;
   allowManualRecords?: boolean;
   style?: string;
+  license?: string;
 }
 
 export interface ImportokWizardState {}
