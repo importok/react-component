@@ -1,5 +1,6 @@
-import { ImportConfigDataProviders, ImportConfigEditorMode, ImportConfigFields, ImportConfigTransformers, ImportConfigTranslations, ImportConfigValidators, ImportRecord, MapperStrategy } from '@importok/javascript';
+import { ImportConfigDataProviders, ImportConfigEditorMode, ImportConfigFields, ImportConfigTransformers, ImportConfigTranslations, ImportConfigValidators, ImportRecord, MapperStrategy, FieldProcessor } from '@importok/javascript';
 import MainElement from '@importok/javascript/MainElement';
+import { MapperStrategyWithContext } from '@importok/javascript/MappingStrategy';
 import * as React from 'react';
 
 export interface ImportokWizardProps {
@@ -11,7 +12,8 @@ export interface ImportokWizardProps {
   providers?: ImportConfigDataProviders;
   locale?: string;
   translations?: ImportConfigTranslations;
-  mapper?: MapperStrategy;
+  fieldProcessor?: FieldProcessor;
+  mapper?: MapperStrategy | MapperStrategyWithContext;
   sampleFile?: string | File;
   uploadedFile?: File;
   throttle?: false | number;
