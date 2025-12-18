@@ -26,6 +26,7 @@ export interface ImportokWizardProps {
   onStepExit?: (step: number, nextStep: null | number) => any;
   warnOnPageUnload?: boolean;
   allowManualRecords?: boolean;
+  enableImportMetrics?: boolean;
   style?: string;
   license?: string;
 }
